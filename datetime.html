@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date</title>
+  <style>
+    #tanggal {
+      color: whitesmoke;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="tanggal"></h1>
+
+  <script>
+    function updateTanggal() {
+      const now = new Date();
+      const hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"][now.getDay()];
+      const tanggal = now.getDate();
+      const bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"][now.getMonth()];
+      const tahun = now.getFullYear();
+      document.getElementById("tanggal").textContent = `${hari}, ${tanggal} ${bulan} ${tahun}`;
+    }
+
+    updateTanggal();
+    setInterval(updateTanggal, 86400000); // Update daily
+  </script>
+</body>
+</html>
