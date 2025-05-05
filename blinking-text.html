@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Animasi Teks Berkedip</title>
+<style>
+body {
+  background-color: transparent;
+}
+
+.blinking {
+  animation: blinker 4s linear infinite; /* Durasi animasi menjadi 4 detik */
+  color: navy;
+  font-size: 2em;
+  font-family: monospace;
+}
+
+@keyframes blinker {
+  25% {
+    opacity: 1; /* Teks terlihat selama 25% (1 detik) */
+  }
+  50% {
+    opacity: 0; /* Teks hilang selama 25% (1 detik) */
+  }
+  75% {
+    opacity: 1; /* Teks terlihat selama 25% (1 detik) */
+  }
+  100% {
+    opacity: 0; /* Teks hilang selama 25% (1 detik) */
+  }
+
+}
+</style>
+</head>
+<body>
+
+<div class="blinking">PERSIAPAN SESI BERIKUTNYA . . .</div>
+
+</body>
+</html>
+
